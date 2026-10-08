@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Confirmación · Periféricos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-p="conf">
+    <main id="main">
+      <h1>¡Gracias por tu compra!</h1>
+      <ol class="steps">
+        <li>1. Envío — Completado ✓</li>
+        <li>2. Pago — Completado ✓</li>
+        <li class="cur" aria-current="step">3. Confirmación — Actual</li>
+      </ol>
+      <section class="box" aria-labelledby="pt">
+        <h2 id="pt">Pedido <span id="oid"></span></h2>
+        <p id="ofe" class="old"></p>
+        <ul id="oit"></ul>
+        <p><strong>Total pagado:</strong> <span id="ot"></span></p>
+        <p><strong>Pago:</strong> <span id="opg"></span></p>
+        <p><strong>Entrega:</strong> <span id="oen"></span></p>
+        <p>Estado: preparando el pedido.</p>
+        <a class="btn pri" href="seguimiento.html">Ver seguimiento</a>
+        <a class="btn" href="index.html">Seguir comprando</a>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

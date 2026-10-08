@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Escribir reseña · Periféricos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-p="res">
+    <main id="main">
+      <h1>Escribe tu reseña</h1>
+      <p class="crumbs">
+        <a id="vp" href="index.html">Volver al producto</a> · <span id="pn"></span>
+      </p>
+      <div id="al" class="box err" role="alert" hidden tabindex="-1"></div>
+      <form id="f" novalidate class="box" style="max-width: 640px">
+        <fieldset>
+          <legend>Valoración *</legend>
+          <div
+            class="two"
+            style="
+              grid-template-columns: repeat(5, auto);
+              justify-content: start;
+              gap: 0.5rem 1.2rem;
+            "
+          >
+            <label class="o"><input type="radio" name="v" value="1" /> 1</label
+            ><label class="o"><input type="radio" name="v" value="2" /> 2</label
+            ><label class="o"><input type="radio" name="v" value="3" /> 3</label
+            ><label class="o"><input type="radio" name="v" value="4" /> 4</label
+            ><label class="o"><input type="radio" name="v" value="5" /> 5</label>
+          </div>
+          <span class="old">1 es la más baja y 5 la más alta.</span>
+        </fieldset>
+        <label for="tx">Comentario * (máximo 140 caracteres)</label
+        ><textarea id="tx" maxlength="140" aria-describedby="ct2"></textarea>
+        <div class="old" id="ct2" aria-live="polite">0 / 140 caracteres</div>
+        <p class="old">
+          Las reseñas no deben incluir insultos. Tu reseña se publicará cuando cumpla las normas de
+          la comunidad.
+        </p>
+        <p>
+          <a class="btn" href="index.html">Cancelar</a>
+          <button class="btn pri">Publicar reseña</button>
+        </p>
+      </form>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

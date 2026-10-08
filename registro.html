@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Acceso · Periféricos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-p="reg">
+    <main id="main">
+      <h1>Accede para continuar con tu compra</h1>
+      <p class="lead">
+        Tus productos siguen en el carrito. Al iniciar sesión continuarás con tu compra.
+      </p>
+      <div class="envl">
+        <form class="box" id="f1" aria-labelledby="li" novalidate>
+          <h2 id="li">Iniciar sesión</h2>
+          <label for="em">Correo electrónico</label
+          ><input id="em" type="email" autocomplete="username" required aria-describedby="e-em" />
+          <div class="err" id="e-em"></div>
+          <label for="pw" style="margin-top: 0.75rem">Contraseña</label
+          ><input
+            id="pw"
+            type="password"
+            autocomplete="current-password"
+            required
+            aria-describedby="e-pw"
+            style="
+              width: 100%;
+              min-height: 40px;
+              padding: 0.5rem 0.7rem;
+              border: 1px solid #1f1f1f;
+              font: inherit;
+            "
+          />
+          <div class="err" id="e-pw"></div>
+          <label class="o"
+            ><input type="checkbox" onclick="pw.type = this.checked ? 'text' : 'password'" />
+            Mostrar contraseña</label
+          >
+          <label class="o"><input type="checkbox" /> Recordarme</label>
+          <p class="old">Recomendado solo en equipos propios.</p>
+          <button class="btn pri w">Iniciar sesión</button>
+        </form>
+        <details class="box">
+          <summary>Crear una cuenta</summary>
+          <form id="f2" style="padding: 1rem" novalidate>
+            <label for="nn">Nombre completo</label
+            ><input id="nn" type="text" autocomplete="name" required aria-describedby="e-nn" />
+            <div class="err" id="e-nn"></div><label
+              for="e2"
+              style="margin-top: 0.75rem"
+              >Correo electrónico</label
+            ><input id="e2" type="email" autocomplete="email" required aria-describedby="e-e2" />
+            <div class="err" id="e-e2"></div><label
+              for="p2"
+              style="margin-top: 0.75rem"
+              >Contraseña (mínimo 8 caracteres)</label
+            ><input
+              id="p2"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+              aria-describedby="e-p2"
+              style="
+                width: 100%;
+                min-height: 40px;
+                padding: 0.5rem 0.7rem;
+                border: 1px solid #1f1f1f;
+                font: inherit;
+              "
+            />
+            <div class="err" id="e-p2"></div>
+            <p><button class="btn pri w">Crear cuenta</button></p>
+          </form>
+        </details>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

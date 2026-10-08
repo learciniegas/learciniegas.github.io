@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pago · Periféricos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-p="pay">
+    <main id="main">
+      <h1>Paga tu pedido</h1>
+      <p class="lead">
+        Revisa los datos y el total antes de pagar. El cobro se hace ahora, no al recibir.
+      </p>
+      <ol class="steps">
+        <li>1. Envío — Completado ✓</li>
+        <li class="cur" aria-current="step">2. Pago — Actual</li>
+        <li>3. Confirmación — Pendiente</li>
+      </ol>
+      <div id="al" class="box err" role="alert" hidden tabindex="-1"></div>
+      <div class="envl">
+        <form id="f" novalidate class="box">
+          <h2>Datos de la tarjeta</h2>
+          <label for="nom">Nombre en la tarjeta *</label
+          ><input id="nom" type="text" autocomplete="cc-name" required aria-describedby="e-nom" />
+          <div class="err" id="e-nom"></div>
+          <label for="num">Número de tarjeta *</label
+          ><input
+            id="num"
+            type="text"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            placeholder="0000 0000 0000 0000"
+            required
+            aria-describedby="h-num e-num"
+          />
+          <div class="old" id="h-num">16 dígitos, sin letras.</div>
+          <div class="err" id="e-num"></div>
+          <div class="two">
+            <div>
+              <label for="exp">Vencimiento (MM/AA) *</label
+              ><input
+                id="exp"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-exp"
+                placeholder="MM/AA"
+                required
+                aria-describedby="e-exp"
+              />
+              <div class="err" id="e-exp"></div>
+            </div>
+            <div>
+              <label for="cvv">Código de seguridad *</label
+              ><input
+                id="cvv"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-csc"
+                required
+                aria-describedby="e-cvv"
+              />
+              <div class="err" id="e-cvv"></div>
+            </div>
+          </div>
+          <label class="o"><input type="checkbox" /> Guardar tarjeta para próximas compras</label>
+          <p>
+            <a class="btn" href="envio.html">Editar envío</a>
+            <button class="btn pri" id="pay">Pagar</button>
+          </p>
+        </form>
+        <aside class="box" aria-labelledby="rs">
+          <h2 id="rs">Resumen</h2>
+          <div id="sum"></div>
+          <h3>Entrega</h3>
+          <p id="ent"></p>
+        </aside>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

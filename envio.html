@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Envío · Periféricos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-p="env">
+    <main id="main">
+      <h1>¿Dónde entregamos tu pedido?</h1>
+      <p class="lead">Los campos con * son obligatorios.</p>
+      <ol class="steps">
+        <li class="cur" aria-current="step">1. Envío — Actual</li>
+        <li>2. Pago — Pendiente</li>
+        <li>3. Confirmación — Pendiente</li>
+      </ol>
+      <div class="envl">
+        <form id="f" novalidate class="box">
+          <h2>Contacto y dirección</h2>
+          <div class="two">
+            <div>
+              <label for="nom">Nombre completo *</label
+              ><input
+                id="nom"
+                name="nom"
+                type="text"
+                autocomplete="name"
+                required
+                aria-describedby="e-nom"
+              />
+              <div class="err" id="e-nom"></div>
+            </div>
+            <div>
+              <label for="tel">Teléfono *</label
+              ><input
+                id="tel"
+                name="tel"
+                type="tel"
+                autocomplete="tel"
+                required
+                pattern="[0-9 +()-]{8,}"
+                data-msg="Ingresa un teléfono ecuatoriano válido, por ejemplo 099 123 4567."
+                aria-describedby="e-tel"
+              />
+              <div class="err" id="e-tel"></div>
+            </div>
+          </div>
+          <label for="mail">Correo para avisos *</label
+          ><input
+            id="mail"
+            name="mail"
+            type="email"
+            autocomplete="email"
+            required
+            data-msg="Ingresa un correo electrónico válido, por ejemplo nombre@correo.ec."
+            aria-describedby="e-mail"
+          />
+          <div class="err" id="e-mail"></div>
+          <label for="dir">Calle y número *</label
+          ><input
+            id="dir"
+            name="dir"
+            type="text"
+            autocomplete="street-address"
+            required
+            aria-describedby="e-dir"
+          />
+          <div class="err" id="e-dir"></div>
+          <div class="two">
+            <div>
+              <label for="col">Barrio o parroquia *</label
+              ><input id="col" name="col" type="text" required aria-describedby="e-col" />
+              <div class="err" id="e-col"></div>
+            </div>
+            <div>
+              <label for="cp">Código postal *</label
+              ><input
+                id="cp"
+                name="cp"
+                type="text"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                required
+                pattern="[0-9]{6}"
+                data-msg="El código postal de Ecuador debe tener 6 dígitos."
+                aria-describedby="e-cp"
+              />
+              <div class="err" id="e-cp"></div>
+            </div>
+          </div>
+          <div class="two">
+            <div>
+              <label for="ciu">Cantón *</label
+              ><input
+                id="ciu"
+                name="ciu"
+                type="text"
+                autocomplete="address-level2"
+                required
+                aria-describedby="e-ciu"
+              />
+              <div class="err" id="e-ciu"></div>
+            </div>
+            <div>
+              <label for="prov">Provincia *</label
+              ><select
+                id="prov"
+                name="prov"
+                autocomplete="address-level1"
+                required
+                aria-describedby="e-prov"
+              >
+                <option value="">Selecciona una provincia</option>
+                <option value="Azuay">Azuay</option>
+                <option value="Bolívar">Bolívar</option>
+                <option value="Cañar">Cañar</option>
+                <option value="Carchi">Carchi</option>
+                <option value="Chimborazo">Chimborazo</option>
+                <option value="Cotopaxi">Cotopaxi</option>
+                <option value="El Oro">El Oro</option>
+                <option value="Esmeraldas">Esmeraldas</option>
+                <option value="Galápagos">Galápagos</option>
+                <option value="Guayas">Guayas</option>
+                <option value="Imbabura">Imbabura</option>
+                <option value="Loja">Loja</option>
+                <option value="Los Ríos">Los Ríos</option>
+                <option value="Manabí">Manabí</option>
+                <option value="Morona Santiago">Morona Santiago</option>
+                <option value="Napo">Napo</option>
+                <option value="Orellana">Orellana</option>
+                <option value="Pastaza">Pastaza</option>
+                <option value="Pichincha">Pichincha</option>
+                <option value="Santa Elena">Santa Elena</option>
+                <option value="Santo Domingo de los Tsáchilas">Santo Domingo de los Tsáchilas</option>
+                <option value="Sucumbíos">Sucumbíos</option>
+                <option value="Tungurahua">Tungurahua</option>
+                <option value="Zamora Chinchipe">Zamora Chinchipe</option>
+              </select>
+              <div class="err" id="e-prov"></div>
+            </div>
+          </div>
+          <label for="ind">Indicaciones (opcional)</label><input id="ind" name="ind" type="text" />
+          <h2 style="margin-top: 1.5rem">Método de entrega</h2>
+          <label class="o"
+            ><input type="radio" name="env" checked /> Estándar · Servientrega · $10 USD</label
+          >
+          <p class="old">El envío se cobra una sola vez por pedido. Courier externo.</p>
+          <p>
+            <a class="btn" href="index.html">Volver al catálogo</a>
+            <button class="btn pri">Continuar al pago</button>
+          </p>
+        </form>
+        <aside class="box" aria-labelledby="rs">
+          <h2 id="rs">Resumen de compra</h2>
+          <div id="sum"></div>
+        </aside>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
